@@ -10,10 +10,12 @@ var rob = function(nums) {
         if(i%2 == 0){
             even += nums[i];
             even = even > odd ? even : odd;
+            console.log(even)
         }
         else{
             odd += nums[i];
             odd = even > odd ? even : odd;
+            console.log(odd)
         }     
     }
     return even > odd ? even : odd;
