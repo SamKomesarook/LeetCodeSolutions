@@ -3,17 +3,11 @@
  * @return {number}
  */
 var missingNumber = function(nums) {
-    let map = new Map()
-    for(let elem of nums){
-        map.set(elem, 1)
+    let total = rTotal = 0
+    for(let i=0; i<nums.length; i++){
+        total += nums[i]
+        rTotal += i
     }
-    let count = nums.length
-    let index = 0
-    while(index < nums.length){
-        if(map.get(index) == undefined){
-            return index
-        }
-        index++
-    }
-    return index
+    rTotal += nums.length
+    return rTotal - total
 };
